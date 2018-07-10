@@ -1,0 +1,71 @@
+<ion-view cache-view="true">
+    <ion-nav-buttons side="left">
+      <a class="button button-icon button-clear ion-android-arrow-back back-btn-color" id="back_arrow{{$index}}" href="#/app/home"></a>
+    </ion-nav-buttons>
+
+    <ion-nav-title class="headerImage">
+      <a class="color-white">Maligakadai</a>
+    </ion-nav-title> 
+
+  <div class="tabs-striped tabs-top tabs-background-positive tabs-color-light tabfontweight">
+    <div class="tabs tabcolor ">
+      <a class="tab-item active tabfontweight" id="login_login" href="#/app/login">        
+           Login
+      </a>
+      <a class="tab-item tabfontweight" id="login_signup" href="#/app/signup">
+           Signup
+      </a>
+     </div>
+  </div>
+  <ion-content class="cus-content prods-bg">
+    <ion-list>
+      <div name="divInStart" id="divInStart" ng-app='maligakadai.controllers'>
+        <div name="divInCtrl" id="divInCtrl" ng-controller='AppCtrl'>
+        <form ng-submit="pressLogin(data, 'login')" class="login_form" name="userLogin">
+          <!-- <p class="title item-title" style="text-align: center;">Login to Maligakadai</p> -->
+          <div class="list login_sign">
+            <label name="lblUserEmail" id="lblUserEmail" class="item item-input  border0">
+              <input 
+                name="txtUserEmail" 
+                id="txtUserEmail" 
+                class="input-log"
+                type="email" 
+                focus-me 
+                placeholder="Email Id" 
+                ng-model='data.loginemail'
+                ng-pattern = "/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/" 
+                required><BR>
+                <span name="spanUserEmail" id="spanUserEmail" ng-show="isValidEmail">
+                  <h4 class='errormessage'>{{emailError}}</h4>
+                </span>
+            </label>
+
+            <label name="lblUserPass" id="lblUserPass" class="item item-input border0 margin-10">
+              <input 
+                name="txtUserPass" 
+                class="input-log"
+                id="txtUserPass" 
+                id="myinput" 
+                type="{{inputType}}" 
+                placeholder="Password" 
+                ng-model='data.loginpassword' 
+                required> 
+              <span name="spanUserPass" id="spanUserPass" ng-show="isValidPassword">
+                <h4 class='errormessage'>{{passwordError}}</h4>
+              </span>
+              <span name="spanhidePassword" id="spanhidePassword" class="eye-icon" on-release="hidePassword()" on-touch="showPassword()">
+                <i class="icon ion-ios-eye"></i>
+              </span>
+            </label><br>
+
+            <p class="text-center"><a class="fontcolor" id="login_forgotPassword" href="#/app/password">Forgot password?</a></p>
+          </div>
+          <div class="log_in">
+            <button class="button button-full log button-rad tabfontweight" id="loginConfirm{{$index}}" ng-disabled="userLogin.$invalid">LOG IN</button>
+          </div>
+        </form>
+        </div>
+      </div>
+    </ion-list>
+  </ion-content>
+</ion-view>
