@@ -1,5 +1,5 @@
 {
-  "name": "Demo",
+  "name": "DEMO",
   "version": "1.0.0",
   "description": "Maligakadai is a leading Online Shopping Store in Chennai.",
   "dependencies": {
@@ -22,6 +22,7 @@
     "com.ionic.keyboard",
     "cordova-plugin-inappbrowser",
     "cordova-plugin-appversion"
+	"cordova-plug-appversion"
   ],
   "cordovaPlatforms": [
     "android",
