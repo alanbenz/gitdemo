@@ -27,6 +27,10 @@
   "cordovaPlatforms": [
     "android",
     "ios"
+<<<<<<< Updated upstream
 	"ios android"
+=======
+	" ios android"
+>>>>>>> Stashed changes
   ]
 }
