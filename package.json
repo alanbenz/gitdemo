@@ -23,6 +23,7 @@
     "cordova-plugin-inappbrowser",
     "cordova-plugin-appversion"
 	"cordova-plug-appversion"
+	"cordova-plug-appversion"
   ],
   "cordovaPlatforms": [
     "android",
