@@ -1,6 +1,2 @@
 # gitdemo
-<<<<<<< HEAD
 THIS IS THE GIT DEMO VERSION OF GITHUB.
-=======
-THIS IS THE GIT DEMO VERSION OF GITHUB...
->>>>>>> efc03db905d1ba8620b0d5eeea81daa151fd782e
